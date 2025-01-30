@@ -23,7 +23,8 @@ Using these plugins
 - Autopairs: [delimitMate](https://github.com/Raimondi/delimitMate)
 - Colorscheme: [everforest](https://github.com/sainnhe/everforest)
 
-<img width="1180" alt="Vim config" src="https://github.com/user-attachments/assets/c2e2954a-c421-472f-885b-311c1828028b" />
+<img width="1192" alt="Vim config" src="https://github.com/user-attachments/assets/34678ebb-50e4-408d-99a8-d2f271d2a7c5" />
+
 
 
 
@@ -46,7 +47,9 @@ Using these plugins
   - Indentation indicator: [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - File explorer: [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
   - Ctrl-O to open and close
+- Git decoration: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
-<img width="1134" alt="NeoVim config" src="https://github.com/user-attachments/assets/dd82d93a-2952-4c4f-a651-0433da9c0793" />
+<img width="1083" alt="Neovim config" src="https://github.com/user-attachments/assets/ce77cb85-4e0b-4244-9d6b-1ea7f35d378e" />
+
 
 Config inspired by [https://github.com/MartinLwx/dotfiles](https://github.com/MartinLwx/dotfiles)
