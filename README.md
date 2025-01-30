@@ -35,6 +35,7 @@ Using these plugins
 - Auto-completion
    - Completion sources: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
    - Vscode autocomplete tab: [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+     - Tab to cycle through
 - LSP support
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
@@ -44,6 +45,7 @@ Using these plugins
   - Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
   - Indentation indicator: [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - File explorer: [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+  - Ctrl-O to open and close
 
 <img width="1134" alt="NeoVim config" src="https://github.com/user-attachments/assets/dd82d93a-2952-4c4f-a651-0433da9c0793" />
 
