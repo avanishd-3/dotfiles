@@ -86,4 +86,12 @@ require("lazy").setup({
 			require("plugins.auto_complete")
 		end,
 	},
+
+    -- Git decoration (show new and deleted lines)
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 })
