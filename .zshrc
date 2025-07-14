@@ -1,6 +1,3 @@
-# This needs to be in root directory. Copy file to /Users/name for config to work.
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -90,7 +87,8 @@ plugins=(git
          gh
          git
          kitty
-         python)
+         python
+         pnpm-shell-completion)
 
 source $ZSH/oh-my-zsh.sh
 
