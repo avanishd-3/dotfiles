@@ -93,5 +93,11 @@ require("lazy").setup({
         config = function()
             require('gitsigns').setup()
         end
+    },
+
+    -- Lua Line (status line plugin)
+    {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
     }
 })

@@ -13,3 +13,5 @@ require('./plugins/colorscheme') -- Custom colorscheme
 require('./plugins/lsp') -- LSPs
 
 require('./plugins/auto_complete') -- Auto completion
+
+require("./plugins/status_line") -- Status line 
