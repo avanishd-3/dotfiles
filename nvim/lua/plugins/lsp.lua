@@ -24,6 +24,7 @@ require('mason-lspconfig').setup({
         'lua_ls', -- Lua LSP
         'rust_analyzer', -- Rust LSP
         'clangd', -- C/C++ LSP
+        'pylsp', -- Python LSP
 
     },
 })
