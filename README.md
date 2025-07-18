@@ -9,6 +9,15 @@ Pretty much standard Kitty terminal, except:
 
 <img width="1106" alt="Kitty config" src="https://github.com/user-attachments/assets/e10410aa-6afe-45e3-92d9-96324f4b07bc" />
 
+## ZSH
+Using Oh-My-ZSH with
+
+- General Autocomplete: [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
+- pnpm autocmplete: [pnpm-shell-completion](https://github.com/g-plane/pnpm-shell-completion)
+
+pnpm lags the terminal without pnpm autocompletion, since zsh autocmplete cannot autocomplete pnpm by itself. The same is probably true for npm, but you shouldn't
+be using npm. pnpm is much faster and fully compatibile.
+
 
 ## Vim
 
@@ -24,8 +33,6 @@ Using these plugins
 - Colorscheme: [everforest](https://github.com/sainnhe/everforest)
 
 <img width="1192" alt="Vim config" src="https://github.com/user-attachments/assets/34678ebb-50e4-408d-99a8-d2f271d2a7c5" />
-
-
 
 
 ## Neovim
