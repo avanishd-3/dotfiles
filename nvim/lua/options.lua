@@ -8,3 +8,9 @@ vim.opt.expandtab = true -- have tabs behave as spaces for python
 
 -- UI Stuff
 vim.opt.number = true -- set numbered lines
+
+-- Inline warnings and errors
+vim.diagnostic.enable = true
+vim.diagnostic.config({
+    virtual_text = true,
+})
