@@ -56,3 +56,7 @@ lspconfig.rust_analyzer.setup{ -- Rust settings
 lspconfig.clangd.setup{ -- C/C++ settings
 
 }
+
+lspconfig.pylsp.setup{ -- Python settings
+
+}
