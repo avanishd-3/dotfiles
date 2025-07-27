@@ -8,6 +8,7 @@ vim.opt.expandtab = true -- have tabs behave as spaces for python
 
 -- UI Stuff
 vim.opt.number = true -- set numbered lines
+vim.opt.winborder = "rounded" -- Add round border on hover (K in Normal mode to hover)
 
 -- Inline warnings and errors
 vim.diagnostic.enable = true
