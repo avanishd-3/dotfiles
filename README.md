@@ -55,7 +55,10 @@ Using these plugins
   - Status line: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - File explorer: [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
   - Ctrl-O to open and close
-- Git decoration: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- Git:
+  - Git commands: [vim-fugitive](https://github.com/tpope/vim-fugitive)
+  - Git decoration: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+  - Git diff view: [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 
 <img width="1083" alt="Neovim config" src="https://github.com/user-attachments/assets/ce77cb85-4e0b-4244-9d6b-1ea7f35d378e" />
 
