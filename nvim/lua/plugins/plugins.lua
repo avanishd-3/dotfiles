@@ -87,12 +87,21 @@ require("lazy").setup({
 		end,
 	},
 
-    -- Git decoration (show new and deleted lines)
+    -- Git stuff
     {
+        -- Show new/deleted lines & can commit hunks
         "lewis6991/gitsigns.nvim",
         config = function()
             require('gitsigns').setup()
         end
+    },
+    {
+        -- Show Git diff view (like VSCode Source Control)
+        "sindrets/diffview.nvim"
+    },
+    {
+        -- Add Git commands
+        "tpope/vim-fugitive"
     },
 
     -- Lua Line (status line plugin)
