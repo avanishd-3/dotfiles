@@ -33,7 +33,9 @@ require('mason-lspconfig').setup({
 
 local lspconfig = require("lspconfig")
 
-lspconfig.lua_ls.setup({ -- Lua settings
+
+-- Using native LSP config so vim global warning actually goes away (may switch the others too eventually)
+vim.lsp.config('lua_ls', { -- Lua settings
 
     settings = {
 
