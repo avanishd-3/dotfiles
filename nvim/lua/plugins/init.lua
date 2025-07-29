@@ -2,6 +2,8 @@
 
 -- Any external packages need to be required here
 
+-- Internal stuff is required at the end of this file
+
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -110,3 +112,9 @@ require("lazy").setup({
     dependencies = { 'nvim-tree/nvim-web-devicons' }
     }
 })
+
+-- Require the internal stuff here so main init.lua doesn't need to
+require("plugins.auto_complete")
+require("plugins.colorscheme")
+require("plugins.lsp")
+require("plugins.status_line")

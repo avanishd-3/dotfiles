@@ -6,12 +6,4 @@ require('./keymaps') -- Import keymapping file -> custom keybinds
 
 
 -- Add plugins
-require('./plugins/plugins') -- Initial plugin file (also has plugins w/o own file)
-
-require('./plugins/colorscheme') -- Custom colorscheme
-
-require('./plugins/lsp') -- LSPs
-
-require('./plugins/auto_complete') -- Auto completion
-
-require("./plugins/status_line") -- Status line 
+require('./plugins/init') -- Initial plugin file (also has plugins w/o own file)
