@@ -25,6 +25,7 @@ require('mason-lspconfig').setup({
         'rust_analyzer', -- Rust LSP
         'clangd', -- C/C++ LSP
         'pylsp', -- Python LSP
+        'ruff',  -- Python formatter & linter
 
     },
 })
@@ -62,3 +63,11 @@ lspconfig.clangd.setup{ -- C/C++ settings
 lspconfig.pylsp.setup{ -- Python settings
 
 }
+
+vim.lsp.config('ruff', { -- Ruff settings (linter & formatter for Python)
+    init_options = {
+        settings = {
+            -- Ruff language server settings
+        }
+    }
+})
