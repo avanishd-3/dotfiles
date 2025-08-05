@@ -31,11 +31,10 @@ require('mason-lspconfig').setup({
 })
 
 -- Different settings for each language
+-- Use native LSP config for all
+-- Note; They are auto enabled by mason-lspconfig, so remember to enable if removing mason-lspconfig
 
-local lspconfig = require("lspconfig")
-
-
--- Using native LSP config so vim global warning actually goes away (may switch the others too eventually)
+-- Using native LSP config so vim global warning actually goes away
 vim.lsp.config('lua_ls', { -- Lua settings
 
     settings = {
@@ -53,12 +52,11 @@ vim.lsp.config('lua_ls', { -- Lua settings
     },
 })
 
-lspconfig.rust_analyzer.setup{ -- Rust settings
-}
+vim.lsp.config('rust_analyzer', { -- Rust settings
+})
 
-lspconfig.clangd.setup{ -- C/C++ settings
-
-}
+vim.lsp.config('clangd', { -- C/C++settings
+})
 
 vim.lsp.config('basedpyright', { -- Python settings
     settings = {
