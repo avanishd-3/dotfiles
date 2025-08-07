@@ -46,10 +46,10 @@ Using these plugins
      - Tab to cycle through
 - LSP support
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
-  - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - Colorscheme: [tokyonight-moon](https://github.com/folke/tokyonight.nvim)
 - Improved editing experience
+  - Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   - Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
   - Indentation indicator: [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
   - Status line: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
