@@ -1,11 +1,13 @@
 -- Require order matters
 
 -- 1. require("mason)
--- 2. require ("mason-lspconfig")
--- 3. require("lspconfig")
+-- 2. require("lspconfig")
 
 
--- Mason and mason-lspconfig make it easier to manage LSPs
+-- Mason makes it easier to manage LSPs
+
+-- I used to use mason-lspconfig to help setup LSPs, but the native LSP setup in 0.11 offers the same functionality
+-- Mason-lspconfig is useful if you use the :LspInstall command (install LSP based on file type), but I never used it
 
 require('mason').setup({
     ui = {
@@ -17,24 +19,10 @@ require('mason').setup({
     }
 })
 
-require('mason-lspconfig').setup({
-    -- Automatically install these servers
-
-    ensure_installed = {
-        'lua_ls', -- Lua LSP
-        'rust_analyzer', -- Rust LSP
-        'clangd', -- C/C++ LSP
-        'basedpyright', -- Python LSP
-        'ruff',  -- Python formatter & linter
-
-    },
-})
-
 -- Different settings for each language
 -- Use native LSP config for all
--- Note; They are auto enabled by mason-lspconfig, so remember to enable if removing mason-lspconfig
 
--- Using native LSP config so vim global warning actually goes away
+-- Vim global warning only goes away when using native LSP setup
 vim.lsp.config('lua_ls', { -- Lua settings
 
     settings = {
@@ -91,4 +79,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
   desc = 'LSP: Disable hover capability from Ruff',
+})
+
+-- Enable LSP servers
+vim.lsp.enable({
+    'lua_ls', -- Lua LSP
+    'rust_analyzer', -- Rust LSP
+    'clangd', -- C/C++ LSP
+    'basedpyright', -- Python LSP
+    'ruff'  -- Python formatter & linter
 })
