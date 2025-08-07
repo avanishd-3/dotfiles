@@ -62,7 +62,7 @@ vim.lsp.config('basedpyright', { -- Python settings
     settings = {
         basedpyright = {
             -- Use Ruff's import organizer
-            disabledOrganizeImports = true,
+            disableOrganizeImports = true,
         },
         python = {
             analysis = {
