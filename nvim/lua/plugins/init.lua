@@ -109,6 +109,14 @@ require("lazy").setup({
     {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+
+    -- Improved syntax highlighting
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        branch = 'main', -- Need to specify b/c master is old branch
+        build = ':TSUpdate' -- Makes sure all installed parsers are updated to latest version
     }
 })
 
