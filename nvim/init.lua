@@ -6,4 +6,4 @@ require('./keymaps') -- Import keymapping file -> custom keybinds
 
 
 -- Add plugins
-require('./plugins/init') -- Initial plugin file (also has plugins w/o own file)
+require('./plugins') -- Initial plugin file (also has plugins w/o own file)
