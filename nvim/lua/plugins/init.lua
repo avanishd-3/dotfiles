@@ -72,20 +72,128 @@ require("lazy").setup({
 		event = { "VimEnter" },
 	},
 
-	-- Auto-completion engine
+	-- Auto-complete
 	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"lspkind.nvim", -- Good looking autocomplete tab
-            -- cmp- plugins are completion source helpers used by nvim-cmp
-			"hrsh7th/cmp-nvim-lsp", -- lsp auto-completion
-			"hrsh7th/cmp-buffer", -- buffer auto-completion
-			"hrsh7th/cmp-path", -- path auto-completion
-			"hrsh7th/cmp-cmdline", -- cmdline auto-completion
-		},
-		config = function()
-			require("plugins.auto_complete")
-		end,
+
+    -- Using blink.cmp b/c it is faster than nvim-cmp, which means better performance on large files
+
+
+    -- See: https://cmp.saghen.dev/installation.html
+    'saghen/blink.cmp',
+    -- optional: provides snippets for the snippet source
+    dependencies = { 'rafamadriz/friendly-snippets' },
+
+    -- use a release tag to download pre-built binaries
+    version = '1.*',
+    -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+    -- build = 'cargo build --release',
+    -- If you use nix, you can build from source using latest nightly rust with:
+    -- build = 'nix run .#build-plugin',
+
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+        -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
+        -- 'super-tab' for mappings similar to vscode (tab to accept)
+        -- 'enter' for enter to accept
+        -- 'none' for no mappings
+        --
+        -- All presets have the following mappings:
+        -- C-space: Open menu or open docs if already open
+        -- C-n/C-p or Up/Down: Select next/previous item
+        -- C-e: Hide menu
+        -- C-k: Toggle signature help (if signature.enabled = true)
+        --
+        -- See :h blink-cmp-config-keymap for defining your own keymap
+        keymap = { 
+            -- Tab and Shift-Tab to go through menu, similar to nvim-cmp
+            -- See: https://github.com/LazyVim/LazyVim/discussions/5152
+            preset = 'enter',
+            ["<Tab>"] = { 'select_next', 'fallback' },
+            ["<S-Tab>"] = { 'select_prev', 'fallback' },
+            },
+
+        cmdline = {
+            completion = { 
+                menu = { auto_show = true }, -- Have menu always open
+                list = {
+                    selection = {
+                        -- Unlike insert mode, cannot use enter to accept first suggestion
+                        -- This allows using Tab to do so
+                        preselect = false,
+                    },
+                },
+            }, 
+            
+        },
+
+        appearance = {
+        -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+        -- Adjusts spacing to ensure icons are aligned
+        nerd_font_variant = 'mono'
+        },
+
+        completion = {
+            -- I like it showing the documentation pop-up
+            -- If having issues with it slowing autocomplete, add auto_show_delay_ms = 200
+            documentation = { auto_show = true },
+
+            -- Add lspkind icons to the completion menu
+            -- See: https://cmp.saghen.dev/recipes.html#nvim-web-devicons-lspkind
+            menu = {
+                draw = {
+                    components = {
+                        kind_icon = {
+                            ellipsis = false, -- Don't truncate icon
+                            text = function(ctx)
+                                local icon = ctx.kind_icon
+                                if vim.tbl_contains({ "Path" }, ctx.source_name) then
+                                    local dev_icon, _ = require("nvim-web-devicons").get_icon(ctx.label)
+                                    if dev_icon then
+                                        icon = dev_icon
+                                    end
+                                else
+                                    icon = require("lspkind").symbolic(ctx.kind, {
+                                        mode = "symbol",
+                                    })
+                                end
+
+                                return icon .. ctx.icon_gap
+                            end,
+
+                            -- Optionally, use highlight groups from nvim-web-devicons
+                            -- Can also add the same function for 'kind.highlight' if you want to 
+                            -- keep the highlight groups in sync with the icons
+                            highlight = function(ctx)
+                                local hl = ctx.kind_hl
+                                if vim.tbl_contains({ "Path" }, ctx.source_name) then
+                                    local dev_icon, dev_hl = require("nvim-web-devicons").get_icon(ctx.label)
+                                    if dev_icon then
+                                        hl = dev_hl
+                                    end
+                                end
+                                return hl
+                            end,
+                        },
+                    },
+                },
+            },
+        },
+
+        -- Default list of enabled providers defined so that you can extend it
+        -- elsewhere in your config, without redefining it, due to `opts_extend`
+        sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        },
+
+        -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
+        -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
+        -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
+        --
+        -- See the fuzzy documentation for more information
+        fuzzy = { implementation = "prefer_rust_with_warning" }
+    },
+    opts_extend = { "sources.default" }
 	},
 
     -- Git stuff
@@ -121,7 +229,6 @@ require("lazy").setup({
 })
 
 -- Require the internal stuff here so main init.lua doesn't need to
-require("plugins.auto_complete")
 require("plugins.colorscheme")
 require("plugins.lsp")
 require("plugins.status_line")

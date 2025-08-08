@@ -41,9 +41,8 @@ Using these plugins
 
 - Package manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 - Auto-completion
-   - Completion sources: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-   - Vscode autocomplete tab: [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
-     - Tab to cycle through
+   - Completion source: [blink-cmp](https://github.com/Saghen/blink.cmp)
+   - Vscode pictograms: [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
 - LSP support
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
