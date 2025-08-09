@@ -87,5 +87,6 @@ vim.lsp.enable({
     'rust_analyzer', -- Rust LSP
     'clangd', -- C/C++ LSP
     'basedpyright', -- Python LSP
-    'ruff'  -- Python formatter & linter
+    'ruff',  -- Python formatter & linter
+    'marksman' -- Markdown LSP
 })

@@ -224,6 +224,17 @@ require("lazy").setup({
         lazy = false,
         branch = 'main', -- Need to specify b/c master is old branch
         build = ':TSUpdate' -- Makes sure all installed parsers are updated to latest version
+    },
+
+    -- Markdown preview
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() -- See: https://github.com/iamcco/markdown-preview.nvim/issues/690
+            vim.opt.rtp:prepend(vim.fn.stdpath('data') .. '/lazy/markdown-preview.nvim')
+            vim.fn['mkdp#util#install']()
+            end,
     }
 })
 

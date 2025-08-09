@@ -7,7 +7,7 @@ require'nvim-treesitter'.setup {
 }
 
 -- No-op if parsers are already installed
-require('nvim-treesitter').install {'lua', 'rust', 'c', 'cpp', 'python'}
+require('nvim-treesitter').install {'lua', 'rust', 'c', 'cpp', 'python', 'markdown_inline'}
 
 -- Enable treesitter highlighting for a filetype
 -- See: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/README.md
