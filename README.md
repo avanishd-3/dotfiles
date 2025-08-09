@@ -59,6 +59,15 @@ Using these plugins
   - Git decoration: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
   - Git diff view: [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 
+| Configured Languages |
+| -------------------- |
+| Lua                  |
+| Rust                 |
+| C                    |
+| C++                  |
+| Python               |
+| Markdown             |
+
 <img width="1083" alt="Neovim config" src="https://github.com/user-attachments/assets/ce77cb85-4e0b-4244-9d6b-1ea7f35d378e" />
 
 
