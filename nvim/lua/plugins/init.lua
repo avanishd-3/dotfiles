@@ -105,7 +105,7 @@ require("lazy").setup({
         -- C-k: Toggle signature help (if signature.enabled = true)
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        keymap = { 
+        keymap = {
             -- Tab and Shift-Tab to go through menu, similar to nvim-cmp
             -- See: https://github.com/LazyVim/LazyVim/discussions/5152
             preset = 'enter',
@@ -114,7 +114,7 @@ require("lazy").setup({
             },
 
         cmdline = {
-            completion = { 
+            completion = {
                 menu = { auto_show = true }, -- Have menu always open
                 list = {
                     selection = {
@@ -123,8 +123,7 @@ require("lazy").setup({
                         preselect = false,
                     },
                 },
-            }, 
-            
+            }
         },
 
         appearance = {
