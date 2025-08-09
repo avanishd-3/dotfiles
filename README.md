@@ -69,6 +69,3 @@ Using these plugins
 | Markdown             |
 
 <img width="1083" alt="Neovim config" src="https://github.com/user-attachments/assets/ce77cb85-4e0b-4244-9d6b-1ea7f35d378e" />
-
-
-Config inspired by [https://github.com/MartinLwx/dotfiles](https://github.com/MartinLwx/dotfiles)
