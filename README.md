@@ -1,5 +1,11 @@
 # Dotfiles
 
+## Brew
+For full setup of computer, use the Brewfile and run 
+
+```ZSH
+brew bundle --file=brewfile.sh.
+```
 ## Kitty
 
 Pretty much standard Kitty terminal, except:
