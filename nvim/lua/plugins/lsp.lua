@@ -81,6 +81,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
   desc = 'LSP: Disable hover capability from Ruff',
 })
 
+vim.lsp.config('marksman', { -- Markdown settings
+})
+
 -- Enable LSP servers
 vim.lsp.enable({
     'lua_ls', -- Lua LSP
