@@ -74,4 +74,5 @@ Using these plugins
 | Python               |
 | Markdown             |
 
-<img width="1083" alt="Neovim config" src="https://github.com/user-attachments/assets/ce77cb85-4e0b-4244-9d6b-1ea7f35d378e" />
+<img width="1250" height="677" alt="Neovim config" src="https://github.com/user-attachments/assets/ffa46cdf-b1e5-4bcc-8844-de41e645bc8c" />
+
