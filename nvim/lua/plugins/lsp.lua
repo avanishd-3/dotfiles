@@ -84,6 +84,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.lsp.config('marksman', { -- Markdown settings
 })
 
+vim.lsp.config('tinymist', { -- Typst settings
+    command = { "tinymist" },
+    filetypes = { "typst" },
+    settings = {
+        -- Add settings
+    }
+})
+
 -- Enable LSP servers
 vim.lsp.enable({
     'lua_ls', -- Lua LSP
@@ -91,5 +99,6 @@ vim.lsp.enable({
     'clangd', -- C/C++ LSP
     'basedpyright', -- Python LSP
     'ruff',  -- Python formatter & linter
-    'marksman' -- Markdown LSP
+    'marksman', -- Markdown LSP
+    'tinymist', -- Typst LSP
 })

@@ -235,6 +235,14 @@ require("lazy").setup({
             vim.opt.rtp:prepend(vim.fn.stdpath('data') .. '/lazy/markdown-preview.nvim')
             vim.fn['mkdp#util#install']()
             end,
+    },
+
+    -- Typst preview
+    {
+        'chomosuke/typst-preview.nvim',
+        lazy = false, -- or ft = 'typst'
+        version = '1.*',
+        opts = {}, -- lazy.nvim will implicitly calls `setup {}`
     }
 })
 
