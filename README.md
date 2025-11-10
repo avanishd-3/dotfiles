@@ -76,3 +76,10 @@ Using these plugins
 
 <img width="1250" height="677" alt="Neovim config" src="https://github.com/user-attachments/assets/ffa46cdf-b1e5-4bcc-8844-de41e645bc8c" />
 
+## Others
+
+### Zed
+
+I tried it out for a day, but the Python LSP is essentially broken (it takes 30 seconds - 1 minute, even for small repos). Also, it ate up my battery. Might come back to it in the future.
+
+Having the active LSPs listed is what I was missing from VS Code. Their diff view is also pretty good.
