@@ -120,15 +120,6 @@ bindkey "$terminfo[kcbt]" menu-select
 # Exclude .git and node_modules directories
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git/" -g "!*/node_modules/*" -g "!Library/"'
 
-# Aliases
-
-# sd stands for set directory
-# Prunes the directories listed in the \()
-# -o is for or, so needs to be there if adding extra ones
-# Parantheses need to be escaped for this to work
-# The default find behavior is to print the pruned files, so -print flag included to remove them
-# See: https://stackoverflow.com/questions/4210042/how-do-i-exclude-a-directory-when-using-find
-alias sd="cd ~ && cd \$(find . \( -name node_modules -o -name venv -o -name raycast -o -name mason -o -name Library -o -name Movies -o -name Pictures -o -name .Trash \) -prune -o -type d -print | fzf)"
 
 # User configuration
 
